@@ -79,14 +79,14 @@ public class GameSetupActivity extends AppCompatActivity {
         txtCharacterName = (TextView) findViewById(R.id.txtCompanyName);
         txtCompanyName = (TextView) findViewById(R.id.txtCompanyName);
 
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtCharacterName.setText(edtCharacterName.getText().toString());
-                txtCompanyName.setText(edtCompanyName.getText().toString());
-                //Nicreturn LocationSetupFragment.newInstance(, 2);
-            }
-        });
+//        btnSubmit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                txtCharacterName.setText(edtCharacterName.getText().toString());
+//                txtCompanyName.setText(edtCompanyName.getText().toString());
+//                //Nicreturn LocationSetupFragment.newInstance(, 2);
+//            }
+//        });
 
     }
 
