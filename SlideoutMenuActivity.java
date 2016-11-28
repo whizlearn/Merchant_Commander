@@ -3,6 +3,7 @@ package com.nicholasdass.merchantcommander;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -19,9 +20,12 @@ public class SlideoutMenuActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_slideout_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +44,16 @@ public class SlideoutMenuActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        CompanyManagementFragment companyManagementFragment = new CompanyManagementFragment();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction().replace(
+                R.id.content_slideout_menu,
+                companyManagementFragment,
+                companyManagementFragment.getTag()
+        ).commit();
     }
 
     @Override
@@ -82,10 +96,24 @@ public class SlideoutMenuActivity extends AppCompatActivity
 
         if (id == R.id.nav_company_management) {
 
-//            intent = new Intent(getApplicationContext(), CompanyManagementActivity.class);
-//            startActivity(intent);
+            CompanyManagementFragment companyManagementFragment = new CompanyManagementFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(
+                    R.id.content_slideout_menu,
+                    companyManagementFragment,
+                    companyManagementFragment.getTag()
+            ).commit();
+
+
 
         } else if (id == R.id.nav_galactic_map) {
+            GalacticMapFragment galacticMapFragment = new GalacticMapFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(
+                    R.id.content_slideout_menu,
+                    galacticMapFragment,
+                    galacticMapFragment.getTag()
+            ).commit();
 
         } else if (id == R.id.nav_news) {
 
