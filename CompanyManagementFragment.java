@@ -2,6 +2,7 @@ package com.nicholasdass.merchantcommander;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,6 +57,14 @@ public class CompanyManagementFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(), "Testing Inventory", Toast.LENGTH_SHORT).show();
+
+                InventoryFragment inventoryFragment = new InventoryFragment();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(
+                        R.id.content_slideout_menu,
+                        inventoryFragment,
+                        inventoryFragment.getTag()
+                ).commit();
             }
         });
 
@@ -91,12 +100,17 @@ public class CompanyManagementFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                SpaceCompanySummaryFragment spaceCompanySummaryFragment = new SpaceCompanySummaryFragment();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(
+                        R.id.content_slideout_menu,
+                        spaceCompanySummaryFragment,
+                        spaceCompanySummaryFragment.getTag()
+                ).commit();
+
             }
         });
 
     }
-
-
-
 
 }

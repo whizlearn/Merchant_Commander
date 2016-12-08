@@ -39,8 +39,8 @@ public class SplashScreen extends Activity {
 
         myThread.start();
 
-        song0 = MediaPlayer.create(getApplicationContext(), R.raw.lightless_dawn);
-        song0.start();
+//        song0 = MediaPlayer.create(getApplicationContext(), R.raw.lightless_dawn);
+//        song0.start();
 
     }
 }
