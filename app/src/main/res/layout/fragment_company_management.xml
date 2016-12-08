@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nicholasdass.merchantcommander.CompanyManagementFragment"
+    android:background="@drawable/content_main">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:id="@+id/btnInventory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Inventory"/>
+
+    <Button
+        android:id="@+id/btnCurrentTradeMissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Current Trade Missions"/>
+
+    <Button
+        android:id="@+id/btnEmployees"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Employees"/>
+
+    <Button
+        android:id="@+id/btnHangar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Hangar"/>
+
+    <Button
+        android:id="@+id/btnFinances"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Finances"/>
+
+    <Button
+        android:id="@+id/btnSpaceCompanySummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Space Company Summary"/>
+
+
+</LinearLayout>
